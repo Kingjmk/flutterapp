@@ -1,0 +1,31 @@
+name: app
+description: A simple Flutter project that showcases how to use the BLoC pattern for authentication.
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.2.0 <3.0.0"
+
+dependencies:
+  bloc: ^6.0.3
+  flutter_bloc: ^6.0.6
+  equatable: ^1.0.2
+  dio: ^3.0.10
+  cupertino_icons: ^0.1.2
+  flutter_secure_storage: 3.3.5
+  universal_html: 1.2.4
+  page_transition: ^1.1.7+6
+  flutter_dotenv: ^3.1.0
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - .env
+    - assets/
+    - assets/images/
