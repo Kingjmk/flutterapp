@@ -39,18 +39,12 @@ class Token {
   String refreshToken;
 
   Token({@required this.accessToken, @required this.refreshToken});
+  Token.fromJson(Map<String, dynamic> json): accessToken = json['access'], refreshToken = json['refresh'];
+  Map<String, dynamic> toJson() => {
+    'access': this.accessToken,
+    'refresh': this.refreshToken,
+  };
 
-  Token.fromJson(Map<String, dynamic> json) {
-    this.accessToken = json['access'];
-    this.refreshToken = json['refresh'];
-  }
-
-  Map<String, dynamic> toJson() {
-    return {
-      'access': this.accessToken,
-      'refresh': this.refreshToken,
-    };
-  }
 
   @override
   String toString() => 'Token';

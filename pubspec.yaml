@@ -16,6 +16,9 @@ dependencies:
   universal_html: 1.2.4
   page_transition: ^1.1.7+6
   flutter_dotenv: ^3.1.0
+  provider: ^4.3.3
+  flutter_speed_dial: ^2.1.1
+
   flutter:
     sdk: flutter
 

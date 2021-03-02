@@ -167,6 +167,6 @@ class __SignInFormState extends State<_SignInForm> {
   }
 
   void _showError(String error) {
-    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(error)));
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(backgroundColor: Colors.red, content: Text(error)));
   }
 }

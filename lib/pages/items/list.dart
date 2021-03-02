@@ -58,7 +58,7 @@ class ItemsListState extends State<ItemsList> {
             backgroundImage: NetworkImage(item.image),
           ),
           title: Text(item.name),
-          subtitle: Text(item.createdOn.toString()),
+          subtitle: Text('Price ${item.price} USD'),
           trailing: Icon(Icons.chevron_right),
           onTap: () => Navigator.of(context).pushNamed(PageRoutes.itemsDetail, arguments: ItemsDetailArguments(item.id))
         ))
@@ -67,15 +67,16 @@ class ItemsListState extends State<ItemsList> {
 
   @override
   Widget build(BuildContext context) {
-    return (this.isLoading) ? Loader(child: Text('Loading items...')) :
+    return (this.isLoading) ?
+    Loader(child: Text('Loading items...')) :
     RefreshIndicator(
-        child: ListView(
-          children: ListTile.divideTiles(
-            context: context,
-            tiles: _buildItems(context),
-          ).toList(),
-        ),
-        onRefresh: _loadItems,
+      child: ListView(
+        children: ListTile.divideTiles(
+          context: context,
+          tiles: _buildItems(context),
+        ).toList(),
+      ),
+      onRefresh: _loadItems,
     );
   }
 }

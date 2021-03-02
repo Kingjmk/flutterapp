@@ -7,6 +7,7 @@ class PageRoutes {
   static const String index = IndexPage.routeName;
   static const String login = LoginPage.routeName;
   static const String logout = LogoutPage.routeName;
+  static const String cart = CartPage.routeName;
   static const String itemsList = ItemsListPage.routeName;
   static const String itemsDetail = ItemsDetailPage.routeName;
 }
@@ -16,6 +17,7 @@ getRoutes(BuildContext context) {
     PageRoutes.index: (context) => IndexPage(),
     PageRoutes.login: (context) => LoginPage(),
     PageRoutes.logout: (context) => LogoutPage(),
+    PageRoutes.cart: (context) => CartPage(),
     PageRoutes.itemsList: (context) => ItemsListPage(),
     PageRoutes.itemsDetail: (context) => ItemsDetailPage(),
   };

@@ -4,7 +4,7 @@ ThemeData appTheme = ThemeData(
     primarySwatch: Colors.blue,
     accentColor: Colors.blueAccent,
     snackBarTheme: SnackBarThemeData(
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.grey,
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(

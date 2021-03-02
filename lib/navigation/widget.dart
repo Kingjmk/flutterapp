@@ -35,6 +35,11 @@ class NavigationDrawer extends StatelessWidget {
       children: <Widget>[
         createDrawerHeader(),
         createDrawerBodyItem(
+          icon: Icons.shopping_cart,
+          text: 'My Cart',
+          onTap: () => Navigator.of(context).pushNamed(PageRoutes.cart),
+        ),
+        createDrawerBodyItem(
           icon: Icons.logout,
           text: 'Logout',
           onTap: () => Navigator.of(context).pushReplacementNamed(PageRoutes.logout),
