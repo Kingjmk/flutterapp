@@ -64,8 +64,7 @@ class AuthenticationService extends BaseAuthenticationService {
     Response res = await GuestApiService.post(refreshUrl, data: {'refresh': user.token.refreshToken});
     Token token = Token.fromJson(res.data);
     user.token = token;
-    updateUser(user);
-    return user;
+    return updateUser(user);
   }
 
   @override
